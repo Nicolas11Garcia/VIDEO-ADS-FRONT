@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif !important;
+  color: #1f1f1f;
+}
+
+label {
+  font-weight: 600;
+}
+
+/* (*) icono de requerido */
+.ant-form-item-required::before {
+  display: none !important;
+}
+
+/* Button*/
+.ant-btn {
+  padding: 10px 14px !important;
+  height: fit-content !important;
+}
+
+.ant-btn-sm {
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+}
+
+/* SELECT*/
+.ant-select-arrow {
+  height: 14px !important;
+}
+
+.ant-select {
+  height: 50px !important;
+}
+
+.ant-select-selector {
+  padding: 8px 16px !important;
+  height: fit-content !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* DRAWLER MENU RESPONSIVE*/
+:where(
+    .css-dev-only-do-not-override-163mf6y
+  ).ant-menu-light.ant-menu-root.ant-menu-inline,
+:where(.css-dev-only-do-not-override-163mf6y).ant-menu-light
+  > .ant-menu.ant-menu-root.ant-menu-inline,
+:where(
+    .css-dev-only-do-not-override-163mf6y
+  ).ant-menu-light.ant-menu-root.ant-menu-vertical,
+:where(.css-dev-only-do-not-override-163mf6y).ant-menu-light
+  > .ant-menu.ant-menu-root.ant-menu-vertical {
+  border-inline-end: none;
+}
+
+.ant-drawer-body {
+  padding: 0 !important;
+}
+
+/* SIDEBAR */
+.title_menu_item {
+  font-weight: 500;
+}
+
+.contenedor_icon_menu_item {
+  background: #e7f5ff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.tamaño_icon_menu_item {
+  width: 20px;
+  height: 20px;
+}
+
+.color_icon_menu_item {
+  color: blue;
+}
+
+.ant-modal-title {
+  font-size: 20px !important;
+}
