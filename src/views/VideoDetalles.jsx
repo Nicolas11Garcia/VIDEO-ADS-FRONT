@@ -20,11 +20,11 @@ export const VideoDetalles = () => {
     await axiosInstance
       .get(BASE_URL_NORMAL + "/videos/getVideoId/" + id)
       .then((response) => {
-        console.log(response);
         setData(response.data);
       })
       .catch((error) => {
-        navigate("/404");
+        console.log(error);
+        //navigate("/404");
       })
       .finally(function () {
         setLoadingScreen(false);
@@ -38,10 +38,10 @@ export const VideoDetalles = () => {
   return (
     <div className="px-6 max-w-[1000px] mx-auto mt-12">
       <div>
-        <Player playsInline src={BASE_URL + data.ruta_video} />
+        <Player fluid={false} width={"full"} height={500} playsInline src={BASE_URL + data.ruta_video} />
 
         <h1 className="text-2xl font-medium mt-4">{data.titulo === "null" ? '' : data.titulo}</h1>
-        <p className="text-gray-600 mt-2">{data.descripcion === "null" ? '' : data.descripcion}</p>
+        <p className="text-gray-600 mt-2">{data.descripcion === "" || data.descripcion === "undefined"  ? 'Sin descripción' : data.descripcion}</p>
       </div>
 
       <div className="flex justify-center ">

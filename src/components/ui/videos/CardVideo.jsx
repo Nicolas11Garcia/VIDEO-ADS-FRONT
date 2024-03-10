@@ -7,7 +7,7 @@ import { Player } from "video-react";
 export const CardVideo = ({ id, rutaVideo, titulo }) => {
   return (
     <Link to={GOTOVIDEO + id}>
-      <Player playsInline src={BASE_URL + rutaVideo} />
+      <Player fluid={false} width={"full"} height={400} playsInline src={BASE_URL + rutaVideo} />
     </Link>
   );
 };
